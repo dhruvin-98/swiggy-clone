@@ -1,11 +1,11 @@
 {
   "name": "day19",
   "version": "1.0.0",
-  "homepage": "https://dhruvin-98.github.io/swiggy-clone",
+  "homepage": "https://dhruvin-98.github.io/swiggy-clone/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html --public-url ./",
+    "build": "parcel build src/index.html --public-url https://dhruvin-98.github.io/swiggy-clone/",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
