@@ -2,16 +2,13 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import Home from "./Components/Home";
 import Restaurant from "./Components/Restaurant";
-import { BrowserRouter, Routes, Route } from "react-router";
+import { HashRouter, Routes, Route } from "react-router";
 import RestaurantMenu from "./Components/RestaurantMenu";
 import SearchFood from "./Components/SearchFood";
 import SecondaryHome from "./Components/SecondaryHome";
 import { store } from "./Stored/stores";
 import {Provider} from "react-redux"
 import Checkout from "./Components/Checkout";
-
-
-
 
 // Header section: Let's build it
 
@@ -20,7 +17,7 @@ function App(){
     return(
        <>
        <Provider store={store}>
-       <BrowserRouter>
+       <HashRouter>
        <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route element={<SecondaryHome></SecondaryHome>}>
@@ -30,7 +27,7 @@ function App(){
         </Route>
         <Route path="/Checkout" element={<Checkout></Checkout>}></Route>
        </Routes>
-       </BrowserRouter>
+       </HashRouter>
        </Provider>
        </>
     )
